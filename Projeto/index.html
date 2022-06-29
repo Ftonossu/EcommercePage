@@ -6,7 +6,15 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/reset.css">
-  
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/cabecalho/cabecalho.css">
+  <link rel="stylesheet" href="./css/cabecalho/logo.css">
+  <link rel="stylesheet" href="./css/cabecalho/navegacao.css">
+  <link rel="stylesheet" href="./css/cabecalho/contato.css">
+  <link rel="stylesheet" href="./css/imagens/imagem-thumb.css">
+  <link rel="stylesheet" href="./css/imagens/imagem.css">
+  <link rel="stylesheet" href="./css/imagens/imagens.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&display=swap" rel="stylesheet">
   <title>Frontend Mentor | E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -17,49 +25,63 @@
 </head>
 <body>
   <header class="cabecalho">
-    <div class="logo"><img src="./images/logo.svg" alt=""></div>
-    <nav class="navegacao">
-      <ul>
-        <li><a href="#">Collections</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
+    <section class="cabecalho__logonav">
+      <div class="logo"><img src="./images/logo.svg" alt=""></div>
+      <nav class="navegacao">
+        <ul class="navegacao__lista">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+
+    </section>
+
     <div class="contato">
       <img src="./images/icon-cart.svg" alt="">
       Contact
     </div>
   </header>
+  <main>
+    <section class="imagens">
 
-  <section class="imagens">
+        <img src="./images/image-product-1.jpg" alt="" class="imagem">
+  
+          <ul class="lista__imagens">
+            <li><img src="./images/image-product-1-thumbnail.jpg" alt="" class="imagem__thumb"></li>
+            <li><img src="./images/image-product-2-thumbnail.jpg" alt="" class="imagem__thumb"></li>
+            <li><img src="./images/image-product-3-thumbnail.jpg" alt="" class="imagem__thumb"></li>
+            <li><img src="./images/image-product-4-thumbnail.jpg" alt="" class="imagem__thumb"></li>
+          </ul>
+        
+    </section>
 
-  </section>
-  <section class="produto">
+    <section class="produto">
 
-    <div class="produto__descricao">
-      <h3 class="produto-linha">Sneaker Company</h3>
-      <h3 class="produto-descricao">Fall Limited Edition Sneakers</h3>
-      <p class="produto-resumo">These low-profile sneakers are your perfect casual wear companion. Featuring a 
-        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>     
-    </div>
-    
-    <div class="produto__preco">
-      <p class="preco-final">$125.00</p>
-      <p class="desconto">50%</p>
-      <p class="preco-inicial">$250.00</p>  
-    </div>
+      <div class="produto__descricao">
+        <h3 class="produto-linha">Sneaker Company</h3>
+        <h3 class="produto-descricao">Fall Limited Edition Sneakers</h3>
+        <p class="produto-resumo">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>     
+      </div>
+      
+      <div class="produto__preco">
+        <p class="preco-final">$125.00</p>
+        <p class="desconto">50%</p>
+        <p class="preco-inicial">$250.00</p>  
+      </div>
 
-    <div class="produto__quantidade">
-      <p class="quantidade-diminuir">-</p>
-      <p class="quantidade-numero">0</p>
-      <p class="quantidade-aumentar">+</p>
-      <p class="adicionar">
-        Add to cart
-      </p>
-    </div>   
-  </section>
-
+      <div class="produto__quantidade">
+        <p class="quantidade-diminuir">-</p>
+        <p class="quantidade-numero">0</p>
+        <p class="quantidade-aumentar">+</p>
+        <p class="adicionar">
+          Add to cart
+        </p>
+      </div>   
+    </section>
+  </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

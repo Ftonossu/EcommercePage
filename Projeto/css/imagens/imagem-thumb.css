@@ -1,0 +1,10 @@
+.imagem__thumb {
+    width: 90px;
+    border-radius: 10px;
+}
+.lista__imagens {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}

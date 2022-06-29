@@ -1,0 +1,13 @@
+.cabecalho {
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid hsl(223, 64%, 98%);
+    padding-bottom: 20px;
+}
+.cabecalho__logonav {
+    display: flex;
+}

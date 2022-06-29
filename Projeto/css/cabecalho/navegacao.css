@@ -1,0 +1,14 @@
+.navegacao__lista{
+    display: flex;
+}
+.navegacao__lista li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: hsl(219, 9%, 45%);
+    font-weight: 400;
+    font-size: 20px;
+}
+.navegacao__lista li{
+    margin-left: 10px;
+}
