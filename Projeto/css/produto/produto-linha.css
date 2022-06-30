@@ -1,0 +1,8 @@
+.produto-linha {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: hsl(26, 100%, 55%);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+}

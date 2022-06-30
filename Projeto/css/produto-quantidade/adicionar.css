@@ -1,0 +1,13 @@
+.adicionar {
+    width: 50%;
+    height: 60px;
+    background-color: hsl(26, 100%, 55%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+}
+.carrinho-adicionar {
+    filter: opacity(0.4) drop-shadow(0 0 0 gray);
+    margin-right: 10px;
+}

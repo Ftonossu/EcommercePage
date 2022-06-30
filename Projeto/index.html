@@ -14,6 +14,19 @@
   <link rel="stylesheet" href="./css/imagens/imagem-thumb.css">
   <link rel="stylesheet" href="./css/imagens/imagem.css">
   <link rel="stylesheet" href="./css/imagens/imagens.css">
+  <link rel="stylesheet" href="./css/produto/desconto.css">
+  <link rel="stylesheet" href="./css/produto/preco-final.css">
+  <link rel="stylesheet" href="./css/produto/preco-inicial.css">
+  <link rel="stylesheet" href="./css/produto/produto-descricao.css">
+  <link rel="stylesheet" href="./css/produto/produto-linha.css">
+  <link rel="stylesheet" href="./css/produto/produto-preco.css">
+  <link rel="stylesheet" href="./css/produto/produto-resumo.css">
+  <link rel="stylesheet" href="./css/produto/produto.css">
+  <link rel="stylesheet" href="./css/produto-quantidade/produto-quantidade.css">
+  <link rel="stylesheet" href="./css/produto-quantidade/quantidade-aumentar.css">
+  <link rel="stylesheet" href="./css/produto-quantidade/quantidade-dimunuir.css">
+  <link rel="stylesheet" href="./css/produto-quantidade/quantidade-numero.css">
+  <link rel="stylesheet" href="./css/produto-quantidade/adicionar.css">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&display=swap" rel="stylesheet">
   <title>Frontend Mentor | E-commerce product page</title>
 
@@ -33,14 +46,16 @@
           <li><a href="#">Men</a></li>
           <li><a href="#">Women</a></li>
           <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
 
     </section>
 
     <div class="contato">
-      <img src="./images/icon-cart.svg" alt="">
-      Contact
+      <img src="./images/icon-cart.svg" alt="" class="carrinho">
+      <img src="./images/image-avatar.png" alt="" class="avatar">
+      
     </div>
   </header>
   <main>
@@ -73,13 +88,16 @@
       </div>
 
       <div class="produto__quantidade">
-        <p class="quantidade-diminuir">-</p>
+        
+        <button class="quantidade-diminuir">-</button>
         <p class="quantidade-numero">0</p>
-        <p class="quantidade-aumentar">+</p>
-        <p class="adicionar">
-          Add to cart
-        </p>
-      </div>   
+        <button class="quantidade-aumentar">+</button>
+        <button class="adicionar">
+          <img src="./images/icon-cart.svg" class="carrinho-adicionar" alt=""> Add to cart
+        </button>
+      </div>  
+
+       
     </section>
   </main>
   

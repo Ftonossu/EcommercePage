@@ -1,0 +1,9 @@
+.quantidade-diminuir {
+    width: 12%;
+    height: 40px;
+    border: none;
+    color: hsl(26, 100%, 55%);
+    font-weight: bold;
+    font-size: 22px;
+    background-color: #fdfdfd;
+}

@@ -1,0 +1,7 @@
+.produto__quantidade {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border: 0.5px solid hsl(223, 64%, 98%);
+    border-radius: 3px;
+}
