@@ -34,3 +34,9 @@ diminuir.addEventListener('click', function(){
         quantidade.textContent = 0;
     }
 })
+
+const avatar = document.querySelector('.avatar');
+const cart = document.querySelector('.cart');
+avatar.addEventListener('click', function(){
+    cart.classList.toggle('inativo');
+})

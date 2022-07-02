@@ -9,3 +9,24 @@
     height: 20px;
     margin: 20px;
 }
+.cart {
+    width: 300px;
+    height: 200px;
+    background-color: #fdfdfd;
+    box-shadow: 0px 10px 15px 0px rgba(169, 175, 160, 0.8);
+    position: absolute;
+    top: 80px;
+    right: 8%;
+}
+.inativo {
+    display: none;
+}
+.cart-titulo{
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: black;
+    width: 100%;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    padding: 15px 10px;
+    font-weight: bold;
+}

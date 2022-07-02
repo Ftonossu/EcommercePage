@@ -11,3 +11,8 @@
     filter: opacity(0.4) drop-shadow(0 0 0 gray);
     margin-right: 10px;
 }
+.adicionar:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+    cursor: pointer;
+}
