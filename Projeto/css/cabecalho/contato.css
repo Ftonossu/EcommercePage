@@ -22,11 +22,11 @@
     display: none;
 }
 .cart-titulo{
-    box-sizing: border-box;
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    color: black;
-    width: 100%;
     border-bottom: 1px solid hsl(220, 14%, 75%);
-    padding: 15px 10px;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: bold;
+    padding: 15px 10px;
+    width: 100%;
 }

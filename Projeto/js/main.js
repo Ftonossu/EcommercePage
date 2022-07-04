@@ -40,3 +40,11 @@ const cart = document.querySelector('.cart');
 avatar.addEventListener('click', function(){
     cart.classList.toggle('inativo');
 })
+
+const adicionar = document.querySelector('.adicionar')
+
+
+adicionar.addEventListener('click', function(){
+    console.log('ola')
+    quantidade.textContent = 0;
+})
