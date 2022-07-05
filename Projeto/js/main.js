@@ -42,9 +42,11 @@ avatar.addEventListener('click', function(){
 })
 
 const adicionar = document.querySelector('.adicionar')
-
+const situacaoCart = document.querySelector('.cart-situacao')
 
 adicionar.addEventListener('click', function(){
     console.log('ola')
     quantidade.textContent = 0;
+    situacaoCart.classList.add('inativo');
+
 })

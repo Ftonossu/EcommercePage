@@ -30,3 +30,9 @@
     padding: 15px 10px;
     width: 100%;
 }
+.cart-situacao {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: hsl(219, 9%, 45%);
+    font-size: 1rem;
+    font-weight: bold;
+}
