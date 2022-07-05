@@ -48,5 +48,9 @@ adicionar.addEventListener('click', function(){
     console.log('ola')
     quantidade.textContent = 0;
     situacaoCart.classList.add('inativo');
-
+    var cartQuantidade = document.createElement('p')
+    var cartImagem = document.createElement('img')
+    var cartBtn = document.createElement('button')
+    cartQuantidade.textContent = "OI"
+    cart.appendChild(cartQuantidade)
 })
