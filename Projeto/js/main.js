@@ -22,10 +22,11 @@ thumb[3].addEventListener('click', function(){
 
 const aumentar = document.querySelector('.quantidade-aumentar');
 const diminuir = document.querySelector('.quantidade-diminuir');
-const quantidade = document.querySelector('.quantidade-numero');
+var quantidade = document.querySelector('.quantidade-numero');
 
 aumentar.addEventListener('click', function(){
-    quantidade.textContent = parseInt(quantidade.textContent) + 1;
+    quantidade.textContent = parseInt(quantidade.textContent) + 1
+    return quantidade.textContent;
 })
 diminuir.addEventListener('click', function(){
     if(quantidade.textContent > 0){
@@ -42,15 +43,34 @@ avatar.addEventListener('click', function(){
 })
 
 const adicionar = document.querySelector('.adicionar')
+const cartProdutos = document.querySelector('.cart-produtos')
 const situacaoCart = document.querySelector('.cart-situacao')
+let resumo = document.querySelector('.produto-descricao')
+let preco = document.querySelector('.preco-final')
 
+console.log(cartProdutos)
 adicionar.addEventListener('click', function(){
-    console.log('ola')
     quantidade.textContent = 0;
     situacaoCart.classList.add('inativo');
-    var cartQuantidade = document.createElement('p')
+
     var cartImagem = document.createElement('img')
+    cartImagem.setAttribute('src', `./images/image-product-1-thumbnail.jpg`)
+    cartImagem.classList.add('carrinho-imagem')
+    cartProdutos.appendChild(cartImagem)
+
+    var cartValor = document.createElement('p')
+    cartValor.textContent = resumo.textContent
+    cartValor.classList.add('carrinho-descricao')
+    cartProdutos.appendChild(cartValor)
+
+    var cartQuantidade = document.createElement('p')
+    cartQuantidade.textContent = preco.textContent + "x" + quantidade.textContent + '$' + (125 * parseInt(quantidade.textContent))
+    cartQuantidade.classList.add('carrinho-descricao')
+    cartProdutos.appendChild(cartQuantidade)
+    
     var cartBtn = document.createElement('button')
-    cartQuantidade.textContent = "OI"
-    cart.appendChild(cartQuantidade)
+    console.log(quantidade.textContent)
 })
+
+
+console.log(teste.textContent)

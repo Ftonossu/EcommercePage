@@ -40,6 +40,22 @@
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 169px;
+    justify-content: space-around;
+    height: 80%;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.carrinho-imagem {
+    width: 70px;
+    border-radius: 5px;
+}
+.carrinho-descricao {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: hsl(219, 9%, 45%);
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 10px;
+    padding: 5px;
+    height: 15px;
 }
