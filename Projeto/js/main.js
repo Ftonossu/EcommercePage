@@ -36,9 +36,9 @@ diminuir.addEventListener('click', function(){
     }
 })
 
-const avatar = document.querySelector('.avatar');
+const carrinho = document.querySelector('.carrinho');
 const cart = document.querySelector('.cart');
-avatar.addEventListener('click', function(){
+carrinho.addEventListener('click', function(){
     cart.classList.toggle('inativo');
 })
 
@@ -50,26 +50,33 @@ let preco = document.querySelector('.preco-final')
 
 console.log(cartProdutos)
 adicionar.addEventListener('click', function(){
-    quantidade.textContent = 0;
     situacaoCart.classList.add('inativo');
+
+    var cartDiv = document.createElement('div')
+    cartDiv.classList.add('.cart-produtos')
+    cartProdutos.appendChild(cartDiv)
 
     var cartImagem = document.createElement('img')
     cartImagem.setAttribute('src', `./images/image-product-1-thumbnail.jpg`)
     cartImagem.classList.add('carrinho-imagem')
-    cartProdutos.appendChild(cartImagem)
+    cartDiv.appendChild(cartImagem)
 
     var cartValor = document.createElement('p')
     cartValor.textContent = resumo.textContent
     cartValor.classList.add('carrinho-descricao')
-    cartProdutos.appendChild(cartValor)
+    cartDiv.appendChild(cartValor)
 
     var cartQuantidade = document.createElement('p')
     cartQuantidade.textContent = preco.textContent + "x" + quantidade.textContent + '$' + (125 * parseInt(quantidade.textContent))
     cartQuantidade.classList.add('carrinho-descricao')
-    cartProdutos.appendChild(cartQuantidade)
+    cartDiv.appendChild(cartQuantidade)
     
-    var cartBtn = document.createElement('button')
+    // var cartBtn = document.createElement('button')
+    // cartProdutos.appendChild(cartBtn)
+    // cartBtn.textContent = "CHECKOUT"
+    // cartBtn.classList.add('checkout')
     console.log(quantidade.textContent)
+    quantidade.textContent = 0;
 })
 
 
