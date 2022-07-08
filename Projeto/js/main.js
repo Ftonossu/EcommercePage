@@ -38,8 +38,10 @@ diminuir.addEventListener('click', function(){
 
 const carrinho = document.querySelector('.carrinho');
 const cart = document.querySelector('.cart');
+const iconeQuantidade = document.querySelector('.icone-quantidade')
 carrinho.addEventListener('click', function(){
     cart.classList.toggle('inativo');
+    
 })
 
 const adicionar = document.querySelector('.adicionar')
@@ -50,6 +52,8 @@ let preco = document.querySelector('.preco-final')
 
 console.log(cartProdutos)
 adicionar.addEventListener('click', function(){
+    iconeQuantidade.classList.remove('inativo');
+    iconeQuantidade.textContent = quantidade.textContent
     situacaoCart.classList.add('inativo');
 
     var cartDiv = document.createElement('div')

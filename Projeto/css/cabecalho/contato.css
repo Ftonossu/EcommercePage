@@ -77,3 +77,16 @@
 .carrinho-descricao1{
     width: 150px;
 }
+.icone-quantidade {
+    background-color: hsl(26, 100%, 55%);
+    width: 15px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 27px;
+    right: 210px;
+    color: #fdfdfd;
+    font-size: 8px;
+    text-align: center;
+}
