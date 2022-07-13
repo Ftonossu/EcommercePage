@@ -53,35 +53,51 @@ let preco = document.querySelector('.preco-final')
 console.log(cartProdutos)
 adicionar.addEventListener('click', function(){
     iconeQuantidade.classList.remove('inativo');
-    iconeQuantidade.textContent = quantidade.textContent
+    iconeQuantidade.textContent = quantidade.textContent;
     situacaoCart.classList.add('inativo');
 
-    var cartDiv = document.createElement('div')
-    cartDiv.classList.add('.cart-produtos')
-    cartProdutos.appendChild(cartDiv)
+    var cartDiv = document.createElement('div');
+    cartDiv.classList.add('cart-produtos');
+    cartProdutos.appendChild(cartDiv);
 
-    var cartImagem = document.createElement('img')
-    cartImagem.setAttribute('src', `./images/image-product-1-thumbnail.jpg`)
-    cartImagem.classList.add('carrinho-imagem')
-    cartDiv.appendChild(cartImagem)
+    var cartImagem = document.createElement('img');
+    cartImagem.setAttribute('src', `./images/image-product-1-thumbnail.jpg`);
+    cartImagem.classList.add('carrinho-imagem');
+    cartDiv.appendChild(cartImagem);
 
-    var cartValor = document.createElement('p')
-    cartValor.textContent = resumo.textContent
-    cartValor.classList.add('carrinho-descricao')
-    cartDiv.appendChild(cartValor)
+    var cartValor = document.createElement('p');
+    cartValor.textContent = resumo.textContent;
+    cartValor.classList.add('carrinho-descricao');
+    cartDiv.appendChild(cartValor);
 
-    var cartQuantidade = document.createElement('p')
-    cartQuantidade.textContent = preco.textContent + "x" + quantidade.textContent + '$' + (125 * parseInt(quantidade.textContent))
-    cartQuantidade.classList.add('carrinho-descricao')
-    cartDiv.appendChild(cartQuantidade)
+    var cartQuantidade = document.createElement('p');
+    cartQuantidade.textContent = preco.textContent + "x" + quantidade.textContent + '$' + ' ' + (125 * parseInt(quantidade.textContent));
+    cartQuantidade.classList.add('carrinho-descricao');
+    cartDiv.appendChild(cartQuantidade);
+
+    var cartDeletar = document.createElement('img');
+    cartDeletar.setAttribute('src', `./images/icon-delete.svg`);
+    cartDeletar.classList.add('carrinho-deletar');
+    cartDiv.appendChild(cartDeletar);
+
+    const deletar = document.querySelector(".carrinho-deletar")
     
+    deletar.addEventListener('click', function (){
+        const cartProdutos = document.querySelector('.cart-produtos');
+        cartProdutos.classList.add('inativo');
+        cart.classList.toggle('inativo');
+        console.log(cartProdutos)
+    })
+
+
+
+
     // var cartBtn = document.createElement('button')
     // cartProdutos.appendChild(cartBtn)
     // cartBtn.textContent = "CHECKOUT"
     // cartBtn.classList.add('checkout')
-    console.log(quantidade.textContent)
+    // console.log(cartProdutos)
     quantidade.textContent = 0;
+
 })
 
-
-console.log(teste.textContent)
