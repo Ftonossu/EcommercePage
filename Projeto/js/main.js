@@ -52,51 +52,67 @@ let preco = document.querySelector('.preco-final')
 
 console.log(cartProdutos)
 adicionar.addEventListener('click', function(){
-    iconeQuantidade.classList.remove('inativo');
-    iconeQuantidade.textContent = quantidade.textContent;
-    situacaoCart.classList.add('inativo');
+    
+    if(quantidade.textContent != 0){
 
-    var cartDiv = document.createElement('div');
-    cartDiv.classList.add('cart-produtos');
-    cartProdutos.appendChild(cartDiv);
+        if (iconeQuantidade.textContent == 0){
+        iconeQuantidade.classList.remove('inativo');
+        iconeQuantidade.textContent = quantidade.textContent;
+        situacaoCart.classList.add('inativo');
+    
+    
+        var cartDiv = document.createElement('div');
+        cartDiv.classList.add('cart-produtos');
+        cartProdutos.appendChild(cartDiv);
+    
+        var cartImagem = document.createElement('img');
+        cartImagem.setAttribute('src', `./images/image-product-1-thumbnail.jpg`);
+        cartImagem.classList.add('carrinho-imagem');
+        cartDiv.appendChild(cartImagem);
+    
+        var cartValor = document.createElement('p');
+        cartValor.textContent = resumo.textContent;
+        cartValor.classList.add('carrinho-descricao');
+        cartDiv.appendChild(cartValor);
+    
+        var cartQuantidade = document.createElement('p');
+        cartQuantidade.textContent = preco.textContent + "x" + quantidade.textContent + ' ' + '$' + (125 * parseInt(quantidade.textContent));
+        cartQuantidade.classList.add('carrinho-descricao1');
+        cartDiv.appendChild(cartQuantidade);
+    
+        var cartDeletar = document.createElement('img');
+        cartDeletar.setAttribute('src', `./images/icon-delete.svg`);
+        cartDeletar.classList.add('carrinho-deletar');
+        cartDiv.appendChild(cartDeletar);
+    
+        const cart = document.querySelector('.cart')
+        var cartBtn = document.createElement('button')
+        cart.appendChild(cartBtn)
+        cartBtn.textContent = "CHECKOUT"
+        cartBtn.classList.add('checkout')  
+        } else {
+            const valorCompra = document.querySelector('.carrinho-descricao1')
+            const quantidadeCart = parseInt(iconeQuantidade.textContent);
+            console.log(quantidadeCart)
+            let quantidadeAdicional = quantidadeCart + parseInt(quantidade.textContent);
+            valorCompra.textContent = preco.textContent + "x" + quantidadeAdicional + ' ' + '$' + (125 * quantidadeAdicional);;
+            iconeQuantidade.textContent = quantidadeAdicional;
+        }
+        
+    } else {
+        return;
+    }
 
-    var cartImagem = document.createElement('img');
-    cartImagem.setAttribute('src', `./images/image-product-1-thumbnail.jpg`);
-    cartImagem.classList.add('carrinho-imagem');
-    cartDiv.appendChild(cartImagem);
-
-    var cartValor = document.createElement('p');
-    cartValor.textContent = resumo.textContent;
-    cartValor.classList.add('carrinho-descricao');
-    cartDiv.appendChild(cartValor);
-
-    var cartQuantidade = document.createElement('p');
-    cartQuantidade.textContent = preco.textContent + "x" + quantidade.textContent + '$' + ' ' + (125 * parseInt(quantidade.textContent));
-    cartQuantidade.classList.add('carrinho-descricao');
-    cartDiv.appendChild(cartQuantidade);
-
-    var cartDeletar = document.createElement('img');
-    cartDeletar.setAttribute('src', `./images/icon-delete.svg`);
-    cartDeletar.classList.add('carrinho-deletar');
-    cartDiv.appendChild(cartDeletar);
 
     const deletar = document.querySelector(".carrinho-deletar")
     
     deletar.addEventListener('click', function (){
         const cartProdutos = document.querySelector('.cart-produtos');
-        cartProdutos.classList.add('inativo');
-        cart.classList.toggle('inativo');
-        console.log(cartProdutos)
+        situacaoCart.classList.toggle('inativo');
+        cart.removeChild(cartProdutos);
+
     })
 
-
-
-
-    // var cartBtn = document.createElement('button')
-    // cartProdutos.appendChild(cartBtn)
-    // cartBtn.textContent = "CHECKOUT"
-    // cartBtn.classList.add('checkout')
-    // console.log(cartProdutos)
     quantidade.textContent = 0;
 
 })
