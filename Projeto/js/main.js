@@ -62,7 +62,7 @@ adicionar.addEventListener('click', function(){
     
     
         var cartDiv = document.createElement('div');
-        cartDiv.classList.add('cart-produtos');
+        cartDiv.classList.add('cart-produtos1');
         cartProdutos.appendChild(cartDiv);
     
         var cartImagem = document.createElement('img');
@@ -107,10 +107,14 @@ adicionar.addEventListener('click', function(){
     const deletar = document.querySelector(".carrinho-deletar")
     
     deletar.addEventListener('click', function (){
-        const cartProdutos = document.querySelector('.cart-produtos');
+        const cartProdutos = document.querySelector('.cart-produtos1');
+        const checkoutBtn = document.querySelector('.checkout')
         situacaoCart.classList.toggle('inativo');
-        cart.removeChild(cartProdutos);
-
+        checkoutBtn.classList.toggle('inativo')
+        cartProdutos.classList.toggle('inativo')
+        iconeQuantidade.textContent = 0;
+        iconeQuantidade.classList.add('inativo')
+        console.log(cartProdutos)
     })
 
     quantidade.textContent = 0;
