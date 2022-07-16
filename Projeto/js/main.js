@@ -107,14 +107,14 @@ adicionar.addEventListener('click', function(){
     const deletar = document.querySelector(".carrinho-deletar")
     
     deletar.addEventListener('click', function (){
-        const cartProdutos = document.querySelector('.cart-produtos1');
-        const checkoutBtn = document.querySelector('.checkout')
+        const cartProdutos1 = document.querySelector('.cart-produtos1');
+        const checkoutBtn = document.querySelector('.checkout');
         situacaoCart.classList.toggle('inativo');
-        checkoutBtn.classList.toggle('inativo')
-        cartProdutos.classList.toggle('inativo')
+        checkoutBtn.classList.toggle('inativo');
+        cartProdutos.classList.toggle('inativo');
         iconeQuantidade.textContent = 0;
-        iconeQuantidade.classList.add('inativo')
-        console.log(cartProdutos)
+        iconeQuantidade.classList.add('inativo');
+        console.log(cartProdutos);
     })
 
     quantidade.textContent = 0;
