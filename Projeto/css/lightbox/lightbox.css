@@ -16,3 +16,40 @@
     height: 400px;
     width: 400px;
 }
+.fechar {
+    position: absolute;
+    top: 90px;
+    right: 475px;
+    height: 20px;
+    width: 20px;
+}
+.proxima-imagem{
+    position: absolute;
+    top: 300px;
+    right: 440px;
+    height: 20px;
+    width: 20px; 
+    background-color: #fdfdfd;
+    padding: 15px;
+    border-radius: 50%;
+}
+.anterior-imagem{
+    position: absolute;
+    top: 300px;
+    left: 440px;
+    height: 20px;
+    width: 20px; 
+    background-color: #fdfdfd;
+    padding: 15px;
+    border-radius: 50%;
+}
+.thumbs-lightbox {
+    position: absolute;
+    top: 540px
+}
+.thumb-imagem {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 5px;
+}

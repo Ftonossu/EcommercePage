@@ -21,8 +21,7 @@ thumb[3].addEventListener('click', function(){
 })
 
 
-// aumentar e diminuir número de compras
-
+// aumentar e diminuir número de itens a serem comprados
 const aumentar = document.querySelector('.quantidade-aumentar');
 const diminuir = document.querySelector('.quantidade-diminuir');
 var quantidade = document.querySelector('.quantidade-numero');
@@ -39,13 +38,13 @@ diminuir.addEventListener('click', function(){
     }
 })
 
-//alterações do carrinho
+//alterações de carrinho
 const carrinho = document.querySelector('.carrinho');
 const cart = document.querySelector('.cart');
 const iconeQuantidade = document.querySelector('.icone-quantidade')
+//mostra ou esconde carrinho
 carrinho.addEventListener('click', function(){
     cart.classList.toggle('inativo');
-    
 })
 
 const adicionar = document.querySelector('.adicionar')
