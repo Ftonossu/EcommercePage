@@ -68,29 +68,22 @@ imagem.addEventListener('click', function(){
     
     })
 
-    // const listaImagens = ['./images/image-product-1.jpg', './images/image-product-2.jpg', './images/image-product-3.jpg', './images/image-product-4.jpg']
+    const listaImagens = ['./images/image-product-1.jpg', './images/image-product-2.jpg', './images/image-product-3.jpg', './images/image-product-4.jpg']
 
-    const listaImagens = {
-        "imagem1": {
-            "src": "./images/image-product-1.jpg",
-        },
-        "imagem2": {
-            "src": "./images/image-product-2.jpg",
-        },
-        "imagem3": {
-            "src": "./images/image-product-3.jpg",
-        },
-        "imagem4": {
-            "src": "./images/image-product-4.jpg",
-        }
-
-    }
     //funcionalidade botao próximo
     const btnProximo = document.querySelector('.proxima-imagem')
+    
     btnProximo.addEventListener('click', function(){
         let imgLightBox = document.querySelector('.lightbox-img');
-        const imgSrc = imgLightBox.getAttribute('src');
-        // imgLightBox.setAttribute('src', listaImagens[1]);
+        for(i=0 ; i < listaImagens.length; i++){
+            if(listaImagens[i] = imgSrc){
+                imgLightBox.setAttribute('src', listaImagens[i+1]);
+                console.log(listaImagens[i+1])
+            }
+
+        }
+        
+        
     })
 
 

@@ -5,19 +5,23 @@ const imagem = document.querySelector('.imagem')
 
 
 console.log('Teste ${imagem} correto')
-
+let imgSrc = "./images/image-product-1.jpg"
 
 thumb[0].addEventListener('click', function(){
-    imagem.setAttribute('src', `./images/image-product-1.jpg`)  
+    imagem.setAttribute('src', `./images/image-product-1.jpg`)
+    imgSrc = "./images/image-product-1.jpg" 
 })
 thumb[1].addEventListener('click', function(){
     imagem.setAttribute('src', `./images/image-product-2.jpg`)  
+    imgSrc = "./images/image-product-2.jpg" 
 })
 thumb[2].addEventListener('click', function(){
-    imagem.setAttribute('src', `./images/image-product-3.jpg`)  
+    imagem.setAttribute('src', `./images/image-product-3.jpg`) 
+    imgSrc = "./images/image-product-3.jpg"  
 })
 thumb[3].addEventListener('click', function(){
     imagem.setAttribute('src', `./images/image-product-4.jpg`)  
+    imgSrc = "./images/image-product-4.jpg" 
 })
 
 
