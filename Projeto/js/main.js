@@ -2,7 +2,7 @@
 const thumb = document.querySelectorAll('.imagem__thumb')
 const imagem = document.querySelector('.imagem')
 
-const listaImagens = ['./images/image-product-1', './images/image-product-2.jpg', './images/image-product-3.jpg', './images/image-product-4.jpg']
+
 
 console.log('Teste ${imagem} correto')
 
