@@ -30,18 +30,37 @@ imagem.addEventListener('click', function(){
     const thumb1 = document.createElement('img')
     thumb1.src = thumb[0].src
     thumb1.classList.add('thumb-imagem')
+    thumb1.addEventListener("click", function(){
+        imgSrc = 1;
+        imgLightBox.setAttribute('src', `./images/image-product-1.jpg`);
+    })
+
     //criaçao e estilo thumb2
     const thumb2 = document.createElement('img')
     thumb2.src = thumb[1].src
     thumb2.classList.add('thumb-imagem')
+    thumb2.addEventListener("click", function(){
+        imgSrc = 2;
+        imgLightBox.setAttribute('src', `./images/image-product-2.jpg`);
+    })
+
     //criaçao e estilo thumb3
     const thumb3 = document.createElement('img')
     thumb3.src = thumb[2].src
     thumb3.classList.add('thumb-imagem')
+    thumb3.addEventListener("click", function(){
+        imgSrc = 3;
+        imgLightBox.setAttribute('src', `./images/image-product-3.jpg`);
+    })
+    
     //criaçao e estilo thumb4
     const thumb4 = document.createElement('img')
     thumb4.src = thumb[3].src
     thumb4.classList.add('thumb-imagem')
+    thumb4.addEventListener("click", function(){
+        imgSrc = 4;
+        imgLightBox.setAttribute('src', `./images/image-product-4.jpg`);
+    })
 
     const thumbs = document.createElement('div')
     thumbs.classList.add('thumbs-lightbox')
@@ -56,6 +75,7 @@ imagem.addEventListener('click', function(){
     }
 
     lightbox.appendChild(img)
+    let imgLightBox = document.querySelector('.lightbox-img');
     lightbox.appendChild(fechar)
     lightbox.appendChild(proximaImagem)
     lightbox.appendChild(anteriorImagem)
@@ -68,30 +88,37 @@ imagem.addEventListener('click', function(){
     
     })
 
-    const listaImagens = ['./images/image-product-1.jpg', './images/image-product-2.jpg', './images/image-product-3.jpg', './images/image-product-4.jpg']
-
     //funcionalidade botao próximo
     const btnProximo = document.querySelector('.proxima-imagem')
     
     btnProximo.addEventListener('click', function(){
         let imgLightBox = document.querySelector('.lightbox-img');
-        for(i=0 ; i < listaImagens.length; i++){
-            if(listaImagens[i] = imgSrc){
-                imgLightBox.setAttribute('src', listaImagens[i+1]);
-                console.log(listaImagens[i+1])
-            }
-
-        }
-        
-        
+        if (imgSrc < 4){
+            imgSrc = imgSrc + 1
+            imgLightBox.setAttribute('src', `./images/image-product-${imgSrc}.jpg`);
+            console.log(imgSrc)
+        } else {
+            imgSrc = 1
+            imgLightBox.setAttribute('src', `./images/image-product-${imgSrc}.jpg`);
+            console.log(imgSrc) 
+        } 
     })
 
-
-
-
-
-
-
+    //funcionalidade botao anterior
+    const btnAnterior = document.querySelector('.anterior-imagem')
+    
+    btnAnterior.addEventListener('click', function(){
+        let imgLightBox = document.querySelector('.lightbox-img');
+        if (imgSrc > 1){
+            imgSrc = imgSrc - 1
+            imgLightBox.setAttribute('src', `./images/image-product-${imgSrc}.jpg`);
+            console.log(imgSrc)
+        } else {
+            imgSrc = 4
+            imgLightBox.setAttribute('src', `./images/image-product-${imgSrc}.jpg`);
+            console.log(imgSrc) 
+        } 
+    })
 
 })
 

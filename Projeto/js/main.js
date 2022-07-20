@@ -5,23 +5,23 @@ const imagem = document.querySelector('.imagem')
 
 
 console.log('Teste ${imagem} correto')
-let imgSrc = "./images/image-product-1.jpg"
-
+let imgSrc = 1
+// Mudar imagem através do clique na thumb
 thumb[0].addEventListener('click', function(){
     imagem.setAttribute('src', `./images/image-product-1.jpg`)
-    imgSrc = "./images/image-product-1.jpg" 
+    imgSrc = 1
 })
 thumb[1].addEventListener('click', function(){
     imagem.setAttribute('src', `./images/image-product-2.jpg`)  
-    imgSrc = "./images/image-product-2.jpg" 
+    imgSrc = 2 
 })
 thumb[2].addEventListener('click', function(){
     imagem.setAttribute('src', `./images/image-product-3.jpg`) 
-    imgSrc = "./images/image-product-3.jpg"  
+    imgSrc = 3  
 })
 thumb[3].addEventListener('click', function(){
     imagem.setAttribute('src', `./images/image-product-4.jpg`)  
-    imgSrc = "./images/image-product-4.jpg" 
+    imgSrc = 4
 })
 
 
