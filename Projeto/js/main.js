@@ -3,27 +3,21 @@ const thumb = document.querySelectorAll('.imagem__thumb')
 const imagem = document.querySelector('.imagem')
 
 
-
 console.log('Teste ${imagem} correto')
 let imgSrc = 1
 // Mudar imagem através do clique na thumb
-thumb[0].addEventListener('click', function(){
-    imagem.setAttribute('src', `./images/image-product-1.jpg`)
-    imgSrc = 1
-})
-thumb[1].addEventListener('click', function(){
-    imagem.setAttribute('src', `./images/image-product-2.jpg`)  
-    imgSrc = 2 
-})
-thumb[2].addEventListener('click', function(){
-    imagem.setAttribute('src', `./images/image-product-3.jpg`) 
-    imgSrc = 3  
-})
-thumb[3].addEventListener('click', function(){
-    imagem.setAttribute('src', `./images/image-product-4.jpg`)  
-    imgSrc = 4
-})
 
+for(let i = 0; i < thumb.length; i++){
+    thumb[i].addEventListener('click', function(){
+        imgSrc = i + 1;
+        mudarImagem(imagem, imgSrc);   
+    })
+}
+
+
+function mudarImagem(element, indice){
+    element.setAttribute('src', `./images/image-product-${indice}.jpg`)
+}
 
 // aumentar e diminuir número de itens a serem comprados
 const aumentar = document.querySelector('.quantidade-aumentar');
@@ -31,7 +25,7 @@ const diminuir = document.querySelector('.quantidade-diminuir');
 var quantidade = document.querySelector('.quantidade-numero');
 
 aumentar.addEventListener('click', function(){
-    quantidade.textContent = parseInt(quantidade.textContent) + 1
+    quantidade.textContent = parseInt(quantidade.textContent) + 1;
     return quantidade.textContent;
 })
 diminuir.addEventListener('click', function(){
@@ -42,7 +36,7 @@ diminuir.addEventListener('click', function(){
     }
 })
 
-//alterações de carrinho
+//declaração alterações de carrinho
 const carrinho = document.querySelector('.carrinho');
 const cart = document.querySelector('.cart');
 const iconeQuantidade = document.querySelector('.icone-quantidade')
@@ -110,8 +104,7 @@ adicionar.addEventListener('click', function(){
             let quantidadeAdicional = quantidadeCart + parseInt(quantidade.textContent);
             valorCompra.textContent = preco.textContent + "x" + quantidadeAdicional + ' ' + '$' + (125 * quantidadeAdicional);;
             iconeQuantidade.textContent = quantidadeAdicional;
-        }
-        
+        }        
     } else {
         return;
     }
